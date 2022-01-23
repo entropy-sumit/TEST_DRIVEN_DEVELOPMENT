@@ -3,4 +3,4 @@ CabInvoiceGenrator.sln
 bin/
 obj/
 CabInvoiceGenrator.csproj
-CabInvoiceGenratorTest.csproj/
+CabInvoiceGeneratorTest.csproj
