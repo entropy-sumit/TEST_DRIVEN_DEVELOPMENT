@@ -46,5 +46,24 @@ namespace CabInvoiceGenartorTest
             //Asserting values
             Assert.AreEqual(expected, fare, time);
         }
+        [TestMethod]
+        public void GivenInvalidRideTypeShouldThrowCustomException()
+        {
+            
+            invoiceGeneartor = new InvoiceGeneartor(RideType.Normal);
+            double distance = 2.0;
+            int time = 5;
+            string expected = "Invalid Ride Type";
+            try
+            {
+                
+                double fare = invoiceGeneartor.CalcaulateFare(distance, time);
+            }
+            catch (CabInvoiceException exception)
+            {
+                
+                Assert.AreEqual(expected, exception);
+            }
+        }
     }
 }
